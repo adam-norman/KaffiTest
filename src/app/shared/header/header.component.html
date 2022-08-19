@@ -1,0 +1,191 @@
+<header class="header" [ngClass]="currentRoute == '/' ? 'home-header': '' ">
+    <div class="container-fluid kaffi-container">
+        <div class="header-flex">
+            <div class="menu-and-login">
+                <div (click)="openMenu()">
+                    <div class="menu home-menu-desktop hidden-desktop" *ngIf="currentRoute !== '/' ">
+                        <img src="assets/images/menu.svg" alt="" />
+                    </div>
+                    <div class="menu home-menu-desktop" *ngIf="currentRoute == '/'">
+                        <img src="assets/images/menu-light.svg" alt="" />
+                    </div>
+                </div>
+                <div class="register-and-login" (click)="openDialog()">
+                    <a href="#" *ngIf="currentRoute == '/'">
+                        <img src="assets/images/person-light.svg" alt="">
+                        <span> تسجيل دخول / حساب جديد </span>
+                    </a>
+                    <a href="#" *ngIf="currentRoute !== '/'">
+                        <img src="assets/images/person-fill.svg" alt="">
+                        <span> تسجيل دخول / حساب جديد </span>
+                    </a>
+                </div>
+                <!-- If User Loogedin -->
+                <!-- <div class="user-loggedin">
+                    <div class="dropdown-click" (click)="openDropdown()">
+                        <img src="../../../assets/images/03-Coffee.svg" class="rounded-circle border" width="35" height="35" alt="">
+                        <span *ngIf="currentRoute == '/'" class="text-white"> خطوة جمل </span>
+                        <span *ngIf="currentRoute !== '/'"> خطوة جمل </span>
+                    </div>
+                    <div class="dropdown-content" [class.open]="open">
+                        <a href="#">
+                            <img src="../../../assets/images/home.svg" alt="">
+                            <span> الرئيسية </span>
+                        </a>
+                        <a href="#">
+                            <img src="../../../assets/images/noun-progress-4638710.svg" alt="">
+                            <span> لوحة التحكم </span>
+                        </a>
+                        <a href="#">
+                            <img src="../../../assets/images/edit-outline.svg" alt="">
+                            <span> تعديل الحساب الشخصي </span>
+                        </a>
+                        <a href="#">
+                            <img src="../../../assets/images/logout.svg" alt="">
+                            <span> تسجيل خروج </span>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="hidden-desktop mini-logo" (click)="openDialog()" *ngIf="currentRoute !== '/'">
+                    <a routerLink="/"> <img src="assets/images/Logo-simp.svg" width="27" height="27" alt=""> </a>
+                </div>
+                <!-- If User -->
+                <!-- <div class="hidden-desktop reg-login" (click)="openDialog()" *ngIf="currentRoute == '/'">
+                    <img src="assets/images/person-light.svg" alt="">
+                </div>
+                <div class="hidden-desktop reg-login" (click)="openDialog()" *ngIf="currentRoute !== '/'">
+                    <img src="assets/images/person-fill.svg" alt="">
+                </div> -->
+
+            </div>
+            <div class="header-logo" *ngIf="currentRoute == '/'">
+                <a routerLink="/"> <img src="assets/images/Logo-llight.svg" alt=""> </a>
+            </div>
+            <div class="header-logo" *ngIf="currentRoute !== '/' ">
+                <a routerLink="/"> <img src="assets/images/dark-logo.svg" alt=""> </a>
+            </div>
+            <div class="header-icons" *ngIf="currentRoute == '/'">
+                <ul class="nav">
+                    <li pTooltip="بحث متقدم" tooltipPosition="bottom">
+                        <a href="#"> <img src="assets/images/search-light.svg" alt=""> </a>
+                    </li>
+                    <li pTooltip="المقارنه" tooltipPosition="bottom">
+                        <a routerLink="/compare"> <img src="assets/images/share-light.svg" alt=""> </a>
+                    </li>
+                    <li pTooltip="المفضله" tooltipPosition="bottom">
+                        <a routerLink="/favourites"> <img src="assets/images/heart-light.svg" alt=""> </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-icons" *ngIf="currentRoute !== '/'">
+                <ul class="nav">
+                    <li pTooltip="بحث متقدم" tooltipPosition="bottom">
+                        <a href="#"> <img src="assets/images/search.svg" alt=""> </a>
+                    </li>
+                    <li pTooltip="المقارنه" tooltipPosition="bottom">
+                        <a routerLink="/compare"> <img src="assets/images/share.svg" alt=""> </a>
+                    </li>
+                    <li pTooltip="المفضله" tooltipPosition="bottom">
+                        <a routerLink="/favourites"> <img src="assets/images/heart.svg" alt=""> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar" [ngClass]="currentRoute == '/' ? 'home-navbar': '' ">
+    <div class="header-logo hidden-desktop" *ngIf="currentRoute == '/'">
+        <a routerLink="/"> <img src="assets/images/Logo-llight.svg" alt=""> </a>
+    </div>
+    <ul class="nav mobile-nav" [ngClass]="currentRoute == '/' ? 'home-navbar-mobile': '' ">
+        <!-- MOBILE -->
+        <div class="hidden-desktop">
+            <div class="header-logo">
+                <div>
+                    <a routerLink="/"> <img src="assets/images/dark-logo.svg" alt=""> </a>
+                </div>
+                <div class="close-mobile-nav" (click)="closeMenu()">
+                    <i class="pi pi-times"></i>
+                </div>
+            </div>
+            <div class="register-and-login">
+                <a href="#">
+                    <img src="assets/images/person-fill.svg" alt="">
+                    <span> تسجيل دخول / حساب جديد </span>
+                </a>
+            </div>
+            <div class="user-loggedin">
+                <div class="dropdown-click" (click)="openToggle()">
+                    <img width="35" height="35" class="rounded-circle border" src="../../../assets/images/product.png" alt="">
+                    <span> فارس الصالح </span>
+                </div>
+                <div class="dropdown-content" [class.open]="open">
+                    <a href="#">
+                        <img src="../../../assets/images/home.svg" alt="">
+                        <span> الرئيسية </span>
+                    </a>
+                    <a href="#">
+                        <img src="../../../assets/images/noun-progress-4638710.svg" alt="">
+                        <span> لوحة التحكم </span>
+                    </a>
+                    <a href="#">
+                        <img src="../../../assets/images/edit-outline.svg" alt="">
+                        <span> تعديل الحساب الشخصي </span>
+                    </a>
+                    <a href="#">
+                        <img src="../../../assets/images/logout.svg" alt="">
+                        <span> تسجيل خروج </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- WEB -->
+        <li class="nav-item">
+            <a routerLink="/offers" class="nav-link"> العروض </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/roasters" class="nav-link"> المحامص </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/product" class="nav-link"> منتجات تناسبك </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link"> مصادر القهوة </a>
+        </li>
+    </ul>
+</nav>
+
+
+<p-dialog header="" [(visible)]="display">
+
+    <div class="logon-form">
+        <div class="title"> تسجيل الدخول </div>
+        <form class="form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="اسم المستخدم">
+                <img src="../../../assets/images/person.svg" alt="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="كلمة المرور">
+                <img src="../../../assets/images/lock-Icon.svg" alt="">
+                <i class="fa fa-eye"></i>
+            </div>
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">تذكرني</label>
+                </div>
+                <div class="forgetPass">
+                    <a href="#"> نسيت كلمة المرور؟ </a>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-reg_log"> تسجيل الدخول </button>
+            </div>
+            <div class="form-group text-center">
+                <span> لا تمتلك حساب ؟ <a routerLink="/user-type"> سجل الآن </a> </span>
+            </div>
+        </form>
+    </div>
+
+</p-dialog>

@@ -1,0 +1,96 @@
+<footer class="footer" [ngClass]="currentRoute =='/' ? 'footer-light':'footer-dark' ">
+    <div class="container-fluid kaffi-container ">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-12 ">
+                <div class="footer-logo" *ngIf="currentRoute =='/'">
+                    <img src="assets/images/dark-logo.svg " alt=" ">
+                </div>
+                <div class="footer-logo" *ngIf="currentRoute !=='/'">
+                    <img src="../../../assets/images/Logo-llight.svg" alt="">
+                </div>
+                <div class="footer-text "> المنصة العربية الأولى المتخصصة بالقهوة المختصة والمحامص وكل ما يلزم الباريستا </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <div class="footer-title ">
+                    <span> روابط سريعة </span>
+                </div>
+                <ul class="footer-links ">
+                    <li>
+                        <a href="# "> العروض </a>
+                    </li>
+                    <li>
+                        <a href="# "> المحامص </a>
+                    </li>
+                    <li>
+                        <a href="# "> منتجات تناسبك </a>
+                    </li>
+                    <li>
+                        <a href="# "> مصادر القهوة </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <div class="footer-title ">
+                    <span> روابط مهمة </span>
+                </div>
+                <ul class="footer-links">
+                    <li>
+                        <a routerLink="/aboutus"> عنا </a>
+                    </li>
+                    <li>
+                        <a routerLink="/contactus"> تواصل معنا </a>
+                    </li>
+                    <li>
+                        <a routerLink="/fqa"> اسئله شائعه </a>
+                    </li>
+                    <li>
+                        <a routerLink="/privacy-policy"> سياسه الخصوصيه </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <div class="footer-title ">
+                    <span> سوشيال ميديا</span>
+                </div>
+                <div class="mobile-view">
+                    <ul class="nav ">
+                        <li>
+                            <a href="# "> <img src="assets/images/twitter.svg " alt=" "> </a>
+                        </li>
+                        <li>
+                            <a href="# "> <img src="assets/images/fb.svg " alt=" "> </a>
+                        </li>
+                        <li>
+                            <a href="# "> <img src="assets/images/insta.svg " alt=" "> </a>
+                        </li>
+                    </ul>
+                    <form class="form-lang hidden-mobile">
+                        <div class="form-group ">
+                            <label class="lbl "> اللغه </label>
+                            <select class="form-control ">
+                                <option> English </option>
+                                <option> Arabic </option>
+                            </select>
+                            <i class="fa fa-angle-down "></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 hidden-desktop">
+                <div class="footer-title">
+                    <span> اللغه</span>
+                </div>
+                <form class="form-lang mt-0">
+                    <div class="form-group ">
+                        <label class="lbl">  </label>
+                        <select class="form-control ">
+                        <option> English </option>
+                        <option> Arabic </option>
+                    </select>
+                        <i class="fa fa-angle-down "></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,24 @@
+<svg id="alert-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #161515;
+      }
+    </style>
+  </defs>
+  <g id="Group_135" data-name="Group 135">
+    <g id="Group_134" data-name="Group 134">
+      <path id="Path_10265" data-name="Path 10265" class="cls-1" d="M9,18a9,9,0,1,1,9-9A8.995,8.995,0,0,1,9,18ZM9,1.406A7.594,7.594,0,1,0,16.594,9,7.589,7.589,0,0,0,9,1.406Z"/>
+    </g>
+  </g>
+  <g id="Group_137" data-name="Group 137" transform="translate(8.297 7.535)">
+    <g id="Group_136" data-name="Group 136">
+      <path id="Path_10266" data-name="Path 10266" class="cls-1" d="M236.7,134.811a.7.7,0,0,1-.7-.7V129.58a.7.7,0,0,1,1.406,0v4.528A.7.7,0,0,1,236.7,134.811Z" transform="translate(-236 -128.877)"/>
+    </g>
+  </g>
+  <g id="Group_139" data-name="Group 139" transform="translate(8.051 4.776)">
+    <g id="Group_138" data-name="Group 138">
+      <circle id="Ellipse_21" data-name="Ellipse 21" class="cls-1" cx="0.949" cy="0.949" r="0.949"/>
+    </g>
+  </g>
+</svg>

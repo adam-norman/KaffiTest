@@ -1,0 +1,66 @@
+<nav class="navbar-admin">
+    <div class="container-fluid kaffi-container-dashborad">
+        <div class="d-flex h-100 justify-content-between align-items-center">
+            <div class="logo hidden-mobile">
+                <img src="../../../assets/images/dark-logo.svg" alt="">
+            </div>
+            <div class="hidden-desktop">
+                <div class=" d-flex align-items-center">
+                    <div class="menu-toggle" (click)="openMenu()">
+                        <img src="../../../assets/images/open-menu.svg" alt="">
+                    </div>
+                    <div class="mini-logo">
+                        <img width="27" height="30" src="../../../assets/images/Logo-simp.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="user-list">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#"> <img src="../../../assets/images/message-admin.svg" alt=""> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <img src="../../../assets/images/notif.svg" alt=""> </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <div class="user-profile">
+                                <img src="../../../assets/images/product.png" alt="">
+                              </div>
+                              </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="hidden-desktop nav-collapsed" [class.active]="active">
+    <ul class="nav flex-column">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">
+            <a routerLink="/admin" class="nav-link"><span class="fa fa-line-chart"></span> إحصائيات الأفراد </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/admin/trackrd-price" class="nav-link"> <span class="fa fa-bell-o"></span> المنتجات المتتبعة </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/admin/plans" class="nav-link"><span class="icon-pay-plans"></span> خطة الدفع </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/admin/fav-roasters" class="nav-link"> <span class="fa fa-star-o"></span> المحامص المفضلة </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/admin/compaigns" class="nav-link"><span class="icon-ads-campaign"></span> الحملات الاعلانية </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/admin/edit-profile" class="nav-link"><span class="fa fa-pencil-square-o"></span> تعديل حساب المحمصة </a>
+        </li>
+    </ul>
+</div>

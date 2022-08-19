@@ -1,0 +1,550 @@
+<div class="wrap-bg">
+    <section class="products">
+        <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                <li class="breadcrumb-item"> <i class="fa fa-angle-left"></i> </li>
+                <li class="breadcrumb-item"><a href="#">البحث المتقدم</a></li>
+                <li class="breadcrumb-item"> <i class="fa fa-angle-left"></i> </li>
+                <li class="breadcrumb-item active" aria-current="page">العروض</li>
+            </ol>
+        </nav>
+        <div class="container-fluid kaffi-container">
+            <div class="filteration">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="switchBtn d-flex align-items-center justify-content-between">
+                            <div class=" d-flex align-items-center ">
+                                <p-inputSwitch [(ngModel)]="checked "></p-inputSwitch>
+                                <span> منتجات عليها عروض فقط  </span>
+                            </div>
+                            <div class="hidden-desktop prod-number">
+                                عدد المنتجات
+                                <span> (12) </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-6 col-12 ">
+                        <form>
+                            <div class="form-group ">
+                                <input type="search " class="form-control " placeholder="بحث حسب الاسم أو النوع أو السلالة ">
+                                <button type="submit " class="btn btn-search "> <img src="../../../assets/images/search-light.svg " alt=" "> </button>
+                            </div>
+                            <div class="tags">
+                                <div class="tag ">
+                                    <ul class="nav ">
+                                        <li class="nav-item ">
+                                            250
+                                            <span> جرام </span>
+                                            <img src="../../../assets/images/close.svg " alt=" ">
+                                        </li>
+                                        <li class="nav-item ">
+                                            <span> مجففة </span>
+                                            <img src="../../../assets/images/close.svg " alt=" ">
+                                        </li>
+                                        <li class="nav-item ">
+                                            <span> البرازيل </span>
+                                            <img src="../../../assets/images/close.svg " alt=" ">
+                                        </li>
+                                        <li class="nav-item ">
+                                            <span> البرازيل </span>
+                                            <img src="../../../assets/images/close.svg " alt=" ">
+                                        </li>
+                                        <li class="nav-item ">
+                                            <span> إزالة جميع الفلاتر </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="prod-number hidden-mobile">
+                                    عدد المنتجات
+                                    <span> 12 </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-3 col-md-6 col-12 ">
+                        <div class="offer-filter products ">
+                            <h2 class="title "> تصفية النتائج حسب </h2>
+                            <p-accordion>
+                                <p-accordionTab header="المحامص " [selected]="true ">
+                                    <form>
+                                        <div class="form-group ">
+                                            <input type="search " class="form-control " placeholder="بحث بالاسم ">
+                                            <button type="submit " class="btn btn-search "> <img src="../../../assets/images/search-gray.svg "> </button>
+                                        </div>
+                                    </form>
+                                </p-accordionTab>
+                                <p-accordionTab header="السعر " [selected]="true ">
+                                    <h5 class="price-range ">
+                                        <span> {{rangeValues[1]}} ريال</span>
+                                        <span> {{ rangeValues[0] }} ريال</span>
+                                    </h5>
+                                    <p-slider [(ngModel)]="rangeValues " [range]="true "></p-slider>
+                                </p-accordionTab>
+                                <p-accordionTab header="الوزن " [selected]="true ">
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 100 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny1 "></p-checkbox>
+                                        <label class="label " for="ny "> 250 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny2 "></p-checkbox>
+                                        <label class="label " for="ny "> 300 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 130 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 110 جرام <span> (8) </span></label>
+                                    </div>
+                                </p-accordionTab>
+                                <p-accordionTab header="المعالجة ">
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 100 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 250 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 300 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 130 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 110 جرام <span> (8) </span></label>
+                                    </div>
+                                </p-accordionTab>
+                                <p-accordionTab header="المصدر ">
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 100 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 250 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 300 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 130 جرام <span> (8) </span></label>
+                                    </div>
+                                    <div class="field-checkbox ">
+                                        <p-checkbox name="group1 " value="New York " inputId="ny "></p-checkbox>
+                                        <label class="label " for="ny "> 110 جرام <span> (8) </span></label>
+                                    </div>
+                                </p-accordionTab>
+                                <p-accordionTab header="السلالة ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+
+                                <p-accordionTab header="الايحاءات ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+                                <p-accordionTab header="نوع العبوة ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+                                <p-accordionTab header="درجة التحميص ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+                                <p-accordionTab header="التحضير ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+                                <p-accordionTab header="النوع ">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+                                        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                        quo minus.</p>
+                                </p-accordionTab>
+                            </p-accordion>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-6 col-12 ">
+                        <section class="products ">
+                            <div class="product-filter d-flex justify-content-between align-items-center ">
+                                <div class="filterByPrice ">
+                                    <form>
+                                        <div class="form-group ">
+                                            <label class="lable "> ترتيب حسب </label>
+                                            <select class="select-transparent ">
+                                  <option> السعر </option>
+                                  <option> السعر </option>
+                                  <option> السعر </option>
+                                </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="show-mode ">
+                                    <span> <img src="../../../assets/images/grid.svg " alt=" "> </span>
+                                    <span> <img src="../../../assets/images/list.svg " alt=" "> </span>
+                                </div>
+                            </div>
+                            <div class="product-content ">
+                                <div class="row ">
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 ">
+                                        <div class="product-card ">
+                                            <div class="prod-content ">
+                                                <div class="prod-img text-center ">
+                                                    <a routerLink="/product-details " class="nav-link "> <img src="../../../assets/images/product.png " alt=" "> </a>
+                                                </div>
+                                                <div class="prod-title text-center "> <a routerLink="/product-details "> أكيا | البرازيل </a> </div>
+                                                <div class="prod-type text-center "> البروفايل </div>
+                                                <div class="prod-offers ">
+                                                    <span> خصم 30 ٪ </span>
+                                                </div>
+                                                <div class="prod-bill ">
+                                                    <span> <i class="fa fa-bell " aria-hidden="true "></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="prod-footer ">
+                                                <ul class="nav ">
+                                                    <li class="nav-item pricing ">
+                                                        <span class="dicount "> 40 رس </span>
+                                                        <span class="price "> 28 رس </span>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-eye " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-random " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons-hovers ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-heart-o " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                    <li class="nav-item icons ">
+                                                        <a href="# " class="nav-link "> <i class="fa fa-external-link " aria-hidden="true "></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

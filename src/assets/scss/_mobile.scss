@@ -1,0 +1,694 @@
+// Start Mobile Screen ---------------
+@media (max-width: 480px) {
+    .kaffi-container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    section {
+        padding: 5rem 0;
+    }
+    // .table {
+    //     width: 500px;
+    // }
+    .hidden-mobile {
+        display: none !important;
+    }
+    .hidden-desktop {
+        display: block;
+    }
+    .btn-success {
+        padding: 10px 15px !important;
+        border-color: #6c9ea0;
+    }
+    .wrapper {
+        position: relative;
+        .header {
+            &.home-header {
+                .menu-and-login {
+                    .home-menu-desktop {
+                        display: block
+                    }
+                    .reg-login {
+                        img {
+                            margin-right: 1.6rem;
+                        }
+                    }
+                }
+            }
+            .header-flex {
+                height: 10.8rem;
+                .menu-and-login {
+                    .register-and-login {
+                        display: none;
+                    }
+                    .menu {
+                        cursor: pointer;
+                    }
+                }
+                .header-logo {
+                    display: none;
+                }
+                .header-icons {
+                    .nav {
+                        li {
+                            margin: 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar {
+            z-index: 4;
+            padding-top: 0;
+            padding-bottom: 0;
+            &.home-navbar {
+                .header-logo {
+                    img {
+                        width: 178px;
+                    }
+                }
+            }
+            .header-logo {
+                img {
+                    width: 178px;
+                }
+            }
+            .nav {
+                display: block;
+                &.mobile-nav {
+                    position: fixed;
+                    background-color: #fff;
+                    right: -48rem;
+                    width: 85%;
+                    height: 100%;
+                    top: 0;
+                    padding: 3rem;
+                    transition: right 1.5s ease;
+                    -webkit-transition: right 1.5s ease;
+                    -moz-transition: right 1.5s ease;
+                    -ms-transition: right 1.5s ease;
+                    -o-transition: right 1.5s ease;
+                    &.show {
+                        right: 0;
+                    }
+                    .header-logo {
+                        margin-top: 2rem;
+                        margin-bottom: 3rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .close-mobile-nav {
+                            cursor: pointer;
+                            i {
+                                font-size: 1.9rem;
+                            }
+                        }
+                    }
+                    .register-and-login {
+                        background-color: #f6f6f6;
+                        padding: 1.2rem 2rem;
+                        margin-bottom: 2rem;
+                        a {
+                            font-size: 1.4rem;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.14;
+                            letter-spacing: normal;
+                            [dir="rtl"] & {
+                                text-align: left;
+                            }
+                            [dir="ltr"] & {
+                                text-align: right;
+                            }
+                            color: #19181c;
+                            text-decoration: none;
+                            img {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                    .loggedIn {
+                        margin-bottom: 30px;
+                        position: relative;
+                        .dropdown-click {
+                            img {
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                [dir="rtl"] & {
+                                    margin-left: 10px;
+                                }
+                                [dir="ltr"] & {
+                                    margin-right: 10px;
+                                }
+                            }
+                            span {
+                                font-size: 16px;
+                                line-height: 1.06;
+                                [dir="rtl"] & {
+                                    text-align: right;
+                                }
+                                [dir="ltr"] & {
+                                    text-align: left;
+                                }
+                                color: #19181c
+                            }
+                            i {
+                                position: absolute;
+                                left: 0;
+                                top: 7px;
+                                font-size: 18px;
+                            }
+                        }
+                        .dropdown-content {
+                            background-color: #fff;
+                            box-shadow: 0 3px 6px rgba(204, 204, 204, 0.313);
+                            padding: 10px;
+                            display: none;
+                            &.open {
+                                display: block;
+                                ;
+                            }
+                            a {
+                                display: block;
+                                font-size: 16px;
+                                color: #19181c;
+                                line-height: 1.6;
+                            }
+                        }
+                    }
+                    .nav-item {
+                        margin: 1.5rem 0;
+                        .nav-link {
+                            color: black;
+                            [dir="rtl"] & {
+                                text-align: right;
+                            }
+                            [dir="ltr"] & {
+                                text-align: left;
+                            }
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .hero {
+            position: relative;
+            background: url(../../assets/images/mobile-bg.jpeg) no-repeat center center / cover;
+            height: 100vh;
+            video {
+                display: none;
+            }
+            .search-area {
+                form {
+                    .form-group {
+                        .form-control {
+                            width: 30rem;
+                        }
+                        .btn-group {
+                            .dropdown-toggle {
+                                width: 60px;
+                                img {
+                                    margin: 0;
+                                    width: 24px;
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .searchBtn {
+                            width: 65px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .product-tab {
+            .nav-pills {
+                width: 37.5rem;
+                .nav-item {
+                    .nav-link {
+                        padding: 2rem 4.5rem;
+                    }
+                }
+            }
+            .tab-content {
+                margin-top: 5rem;
+            }
+        }
+        .kaffi-news {
+            .subscribe-form {
+                max-width: 100%;
+            }
+        }
+        .kaffi-platform {
+            .grid-box {
+                grid-template-columns: repeat(2, 1fr);
+                .box-item {
+                    width: 16rem;
+                    height: 16rem;
+                    .nummber {
+                        font-size: 2.7rem;
+                    }
+                    .text {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .footer {
+            .footer-logo,
+            .footer-text {
+                text-align: center;
+            }
+            .footer-text {
+                margin: 1rem auto 4rem auto;
+                width: 80%;
+            }
+            .footer-links {
+                margin-bottom: 4rem;
+            }
+            .form-lang {
+                .form-group {
+                    z-index: 999;
+                    width: 55%;
+                    i {
+                        top: 29px;
+                    }
+                }
+            }
+        }
+        .filteration {
+            .switchBtn {
+                margin-bottom: 2rem;
+            }
+            form {
+                .tags {
+                    .tag {
+                        .nav {
+                            .nav-item {
+                                padding: 8.5px 14px 7.5px 14px;
+                                margin-bottom: 1rem;
+                                [dir="rtl"] & {
+                                    margin-left: .4rem;
+                                }
+                                [dir="ltr"] & {
+                                    margin-right: .4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .compare {
+            position: relative;
+            .fixed-width-in-mobile {
+                overflow-x: auto;
+                .comapre-grid {
+                    width: 100%;
+                    .compare-item {
+                        min-width: 200px;
+                        .image {
+                            width: 6.9rem;
+                            height: 9.2rem;
+                        }
+                        .nav {
+                            .nav-item {
+                                font-size: 1.3rem;
+                                img {
+                                    width: 1.6rem;
+                                    height: auto;
+                                }
+                            }
+                            &.type {
+                                .nav-item {
+                                    font-weight: bold;
+                                    color: #787878;
+                                }
+                            }
+                        }
+                        .compare-btn {
+                            .btn-secondary,
+                            .btn-outline-danger {
+                                padding: 1rem 1rem 1rem;
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .product-details {
+            .product-details-content {
+                .prod-slider {
+                    display: block;
+                    .slider {
+                        .slide {
+                            width: 100%;
+                            padding: 0;
+                        }
+                        .carousel-indicators {
+                            .thumbs {
+                                width: 6rem;
+                                height: 8rem;
+                            }
+                        }
+                    }
+                }
+                .prod-actions {
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    z-index: 9999;
+                    .nav {
+                        flex-direction: row !important;
+                        background-color: #fff;
+                        justify-content: center;
+                        align-items: center;
+                        height: 80px;
+                        .nav-link {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .details {
+                    margin-top: 3rem;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                .product-details-tabs {
+                    .tab-content {
+                        padding: 4rem 0;
+                    }
+                }
+            }
+        }
+        .contact-us {
+            .contact-form {
+                .contact-feilds {
+                    padding: 3rem;
+                }
+            }
+        }
+        .roasters {
+            .search {
+                width: 100% !important;
+                padding-top: 0;
+            }
+            .roasters-grid {
+                grid-template-columns: repeat(2, 1fr);
+                .roasters-item {
+                    padding: 4.4rem 1rem 2.2rem 1rem;
+                    .image {
+                        width: 13.6rem;
+                        height: 13.6rem;
+                    }
+                }
+            }
+        }
+        .roaster-profile {
+            .content-grid {
+                grid-template-columns: repeat(1, 1fr);
+                .content-item {
+                    .nav-pills {
+                        .nav-item {
+                            .nav-link {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    margin-bottom: 1rem;
+                                    margin-left: 0;
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pricing-helper {
+            .pricing-grid {
+                overflow-x: auto;
+                .pricing-item {
+                    min-width: 158px;
+                }
+            }
+        }
+        .about-kaffi {
+            padding: 4rem;
+            .title {
+                text-align: center !important;
+                padding: 20px 0;
+            }
+        }
+        .about-indvadual,
+        .owners-toasters {
+            padding: 4rem;
+            .indvadual-box {
+                margin-bottom: 3rem;
+            }
+        }
+        .pricing-user {
+            .pricing {
+                overflow-x: auto;
+                .price-list {
+                    min-width: 290px;
+                }
+            }
+        }
+        .card {
+            .block {
+                margin-bottom: 30px !important;
+            }
+        }
+        .privacy {
+            .block {
+                .subtitle {
+                    font-size: 14px;
+                }
+            }
+        }
+        .coffe-map {
+            .coffe-map-information {
+                .coffee-grid {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+        .user-test {
+            .main-content {
+                .content {
+                    .users,
+                    .ages,
+                    .coffee-time,
+                    .challanges,
+                    .smoking {
+                        width: 100%;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .user-type {
+            flex-direction: column;
+            padding: 7rem 0;
+        }
+        .user-tab {
+            .nav-pills {
+                width: 37.3rem!important;
+                .nav-item {
+                    .nav-link {
+                        padding: 2rem 3.6rem;
+                    }
+                }
+            }
+            .tab-content {
+                .form {
+                    width: 74.5%;
+                    .ftxt {
+                        line-height: 1.5;
+                    }
+                    .ftext {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 1.56;
+                        color: #19181c;
+                    }
+                    .form-group {
+                        display: block;
+                        justify-content: flex-end;
+                        .nav {
+                            .nav-item {
+                                padding: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .alert {
+            padding: 16px 15px 16px 15px;
+            span {
+                font-size: 13px;
+                line-height: 1.3;
+                width: 80%;
+            }
+        }
+    }
+    /** Start Admin  */
+    .kaffi-container-dashborad {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .menu-toggle {
+        img {
+            cursor: pointer;
+            [dir="rtl"] & {
+                margin-left: 1rem;
+            }
+            [dir="ltr"] & {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .nav-collapsed {
+        position: fixed;
+        z-index: 9999;
+        background-color: #fff;
+        height: 100%;
+        width: 80%;
+        [dir="rtl"] & {
+            transition: right 1.5s ease;
+            -webkit-transition: right 1.5s ease;
+            -moz-transition: right 1.5s ease;
+            -ms-transition: right 1.5s ease;
+            -o-transition: right 1.5s ease;
+        }
+        [dir="ltr"] & {
+            transition: left 1.5s ease;
+            -webkit-transition: left 1.5s ease;
+            -moz-transition: left 1.5s ease;
+            -ms-transition: left 1.5s ease;
+            -o-transition: left 1.5s ease;
+        }
+        [dir="rtl"] & {
+            right: -80%;
+        }
+        [dir="ltr"] & {
+            left: 0;
+        }
+        &.active {
+            [dir="rtl"] & {
+                right: 0;
+            }
+            [dir="ltr"] & {
+                left: 0;
+            }
+        }
+        .nav {
+            .nav-item {
+                padding: 1.2rem 3rem;
+                border-bottom: 0.01px solid #c3c3c355;
+                .nav-link {
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.14;
+                    letter-spacing: normal;
+                    color: #19181c;
+                    span {
+                        [dir="rtl"] & {
+                            margin-left: 5px;
+                        }
+                        [dir="ltr"] & {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                &.active {
+                    background-color: #19181c;
+                    .nav-link {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard {
+        .main-sidebar {
+            display: none;
+        }
+        .main-content {
+            [dir="rtl"] & {
+                margin-right: 0;
+            }
+            [dir="ltr"] & {
+                margin-left: 0;
+            }
+            .content-dashboard {
+                padding: 5rem 2.3rem;
+                .card {
+                    margin-bottom: 3rem;
+                }
+                .pricing {
+                    padding-top: 2rem;
+                    grid-template-columns: repeat(1, 1fr);
+                    .price-list {
+                        margin-bottom: 2rem;
+                        &:nth-of-type(2) {
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+                .list-group {
+                    .list {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .text {
+                            margin-bottom: 2rem;
+                        }
+                        .plans {
+                            width: 100%;
+                            .btn-success {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p-dialog {
+        .p-element {
+            width: 90vw;
+        }
+        .logon-form {
+            padding: 3rem 0;
+        }
+        .product-details-content {
+            padding: 6.4rem 1rem;
+            .img-mobile {
+                width: 200px;
+                margin: 10px auto;
+            }
+        }
+        .p-dialog-header {
+            padding: 2.5rem !important;
+        }
+        .pi {
+            font-size: 2rem;
+        }
+    }
+}
