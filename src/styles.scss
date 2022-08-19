@@ -22,6 +22,8 @@ $Kaffi-theme: mat.define-light-theme(( color: ( primary: $Kaffi-primary, accent:
 @include mat.all-component-themes($Kaffi-theme);
 
 /* You can add global styles to this file, and also import other style files */
+@import "~alertifyjs/build/css/alertify.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.rtl.min.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
@@ -4837,3 +4839,6 @@ p-dialog {
 }
 
 @import './assets/scss/mobile';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
