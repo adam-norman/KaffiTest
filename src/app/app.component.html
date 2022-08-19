@@ -1,8 +1,0 @@
-<div class="wrapper">
-    <!-- If User -->
-    <app-header *ngIf="!isAdmin"></app-header>
-    <!-- If Admin -->
-    <app-admin-header *ngIf="isAdmin"></app-admin-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-</div>
